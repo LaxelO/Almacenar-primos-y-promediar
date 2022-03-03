@@ -5,7 +5,7 @@ bool esPrimo(int numero);
 int main() {
 
     int numLimite;
-    std::cout << "Escribe un número y te diré si es primo:\n";
+    std::cout << "Escribe un número y te diré si es primo: " << std::endl;
     std::cin >> numLimite;
 
     float miau = 0;
