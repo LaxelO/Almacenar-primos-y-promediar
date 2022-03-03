@@ -1,0 +1,35 @@
+#include <iostream>
+
+bool esPrimo(int numero);
+
+int main() {
+
+    int numLimite;
+    std::cout << "Escribe un número y te diré si es primo:\n";
+    std::cin >> numLimite;
+
+    float miau = 0;
+    float contador = 0;
+
+
+    for (int numero = 1; numero < numLimite; numero++)
+    {
+        if (esPrimo(numero)) {
+            miau += numero;
+            contador++;
+        }
+    }
+    std::cout << "Valor de miau: " << miau << std::endl;
+    std::cout << "Valor de contador: " << contador << std::endl;
+    double promedio = miau / contador;
+    std::cout << "Promedio: " << promedio;
+}
+
+bool esPrimo(int numero) 
+{
+    if (numero == 0 || numero == 1 || numero == 4) return false;
+    for (int x = 2; x < numero / 2; x++) {
+        if (numero % x == 0) return false;
+    }
+    return true;
+}
